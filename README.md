@@ -7,7 +7,18 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 점자 블록 위에 불법 주차된 개인형 이동장치(전동킥보드 등)를 자동으로 탐지하는 딥러닝 기반 시스템입니다.
+## 📄 Paper
 
+**"세그멘테이션 기반 개인형 이동장치 불법 주차 단속 시스템"**
+
+[![DBpia](https://img.shields.io/badge/DBpia-논문%20보기-blue)](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11737137)
+[![Conference](https://img.shields.io/badge/Conference-KICS%202024-green)](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11737137)
+
+- 📎 [논문 링크 (DBpia)](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11737137)
+- 📅 2024년도 한국통신학회 동계종합학술발표회
+- 🏫 순천향대학교
+
+```
 ## 📋 개요
 
 개인형 이동장치의 사용 증가로 도보에 무분별하게 방치되는 상황이 증가하고 있습니다. 특히 점자 블록 위의 불법 주차는 시각 장애인의 통행을 방해하고 안전사고를 유발할 수 있습니다.
@@ -254,36 +265,17 @@ CLASS_SCOOTER = 1      # 개인형 이동장치 클래스 ID
 
 ## 🏆 수상
 
+**순천향대학교 제7회 빅데이터 분석 및 개발 경진대회 대상**
+
+[![Award](https://img.shields.io/badge/Award-대상-gold)](https://github.com/mainvoid00/Illegal_Parking_System)
+
+- 🏅 AI·빅데이터학과 주최
+- 📅 2023년 11월 30일
+
+<details>
+<summary>📜 상장 보기</summary>
+<br>
 <div align="center">
 <img src="assets/award.png" alt="제7회 빅데이터 분석 및 개발 경진대회 대상" width="500">
-
-**제7회 빅데이터 분석 및 개발 경진대회 대상**
-
-AI·빅데이터학과 주최 | 2023년 11월 30일
 </div>
-
-## 🤝 기여
-
-버그 리포트, 기능 제안, Pull Request를 환영합니다.
-
-## 📄 라이선스
-
-이 프로젝트는 MIT 라이선스를 따릅니다.
-
-## 📚 참고문헌
-
-**📎 논문 링크:** [DBpia에서 보기](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11737137)
-
-```
-@inproceedings{lee2024segmentation,
-  title={세그멘테이션 기반 개인형 이동장치 불법 주차 단속 시스템},
-  author={이현우 and 이소연 and 김민승 and 김예서 and 김대영},
-  booktitle={2024년도 한국통신학회 동계종합학술발표회},
-  year={2024},
-  organization={순천향대학교}
-}
-```
-
-## 🙏 감사의 글
-
-이 연구는 정부(과학기술정보통신부)의 재원으로 한국연구재단의 지원을 받아 수행되었습니다. (No.2021R1C1C1013133)
+</details>
