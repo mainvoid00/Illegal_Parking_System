@@ -380,7 +380,7 @@ class IllegalParkingDetector:
 
 def run(
     weights='best.pt',
-    source='data/images',
+    source='test.jpg',
     device='',
     imgsz=(640, 640),
     conf_thres=0.25,
@@ -388,7 +388,7 @@ def run(
     illegal_distance=100,
     save_dir='runs/detect',
     view_img=False,
-    save_img=True,
+    no_save=False,
     half=False,
 ):
     """
@@ -408,7 +408,7 @@ def run(
         source=source,
         save_dir=save_dir,
         view_img=view_img,
-        save_img=save_img,
+        save_img=not no_save,
     )
     
     # 최종 통계 출력
@@ -429,7 +429,7 @@ def parse_opt():
     )
     parser.add_argument('--weights', type=str, default='best.pt',
                        help='학습된 모델 가중치 경로')
-    parser.add_argument('--source', type=str, default='data/images',
+    parser.add_argument('--source', type=str, default='test.jpg',
                        help='입력 소스 (이미지/비디오/웹캠/스트림)')
     parser.add_argument('--device', default='',
                        help='cuda device (예: 0 또는 0,1,2,3 또는 cpu)')
@@ -445,8 +445,8 @@ def parse_opt():
                        help='결과 저장 디렉토리')
     parser.add_argument('--view-img', action='store_true',
                        help='결과 실시간 표시')
-    parser.add_argument('--save-img', action='store_true', default=True,
-                       help='결과 이미지 저장')
+    parser.add_argument('--no-save', action='store_true',
+                       help='결과 저장 안함')
     parser.add_argument('--half', action='store_true',
                        help='FP16 half-precision 사용')
     

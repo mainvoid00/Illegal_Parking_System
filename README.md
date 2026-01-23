@@ -56,24 +56,23 @@ pip install ultralytics opencv-python numpy
 
 ```bash
 # 이미지 분석
-python illegal_parking_simple.py --weights best.pt --source test.jpg
+python illegal_parking_detection.py --weights best.pt --source test.jpg
 
 # 비디오 분석
-python illegal_parking_simple.py --weights best.pt --source video.mp4
+python illegal_parking_detection.py --weights best.pt --source video.mp4
 
 # 웹캠 실시간 분석
-python illegal_parking_simple.py --weights best.pt --source 0 --view-img
+python illegal_parking_detection.py --weights best.pt --source 0 --view-img
 
 # RTSP 스트림
-python illegal_parking_simple.py --weights best.pt --source rtsp://...
+python illegal_parking_detection.py --weights best.pt --source rtsp://...
 ```
 
 ## 📁 파일 구조
 
 ```
 .
-├── illegal_parking_simple.py    # 간단한 단독 실행 버전 (권장)
-├── illegal_parking_detection.py # YOLOv5 레포지토리 기반 버전
+├── illegal_parking_detection.py # 불법 주차 탐지 메인 스크립트
 ├── best.pt                      # 학습된 모델 가중치
 ├── README.md
 └── runs/
@@ -98,16 +97,16 @@ python illegal_parking_simple.py --weights best.pt --source rtsp://...
 
 ```bash
 # 기본 실행
-python illegal_parking_simple.py --weights best.pt --source ./images/
+python illegal_parking_detection.py --weights best.pt --source ./images/
 
 # 거리 임계값 조정 (150픽셀 이내면 불법주차)
-python illegal_parking_simple.py --weights best.pt --source test.jpg --illegal-distance 150
+python illegal_parking_detection.py --weights best.pt --source test.jpg --illegal-distance 150
 
 # 높은 confidence로 필터링
-python illegal_parking_simple.py --weights best.pt --source test.jpg --conf-thres 0.5
+python illegal_parking_detection.py --weights best.pt --source test.jpg --conf-thres 0.5
 
 # 실시간 표시 + 저장 안함
-python illegal_parking_simple.py --weights best.pt --source 0 --view-img --no-save
+python illegal_parking_detection.py --weights best.pt --source 0 --view-img --no-save
 ```
 
 ## 🔧 알고리즘
@@ -191,7 +190,7 @@ Algorithm: Illegal Parking Check
 
 | 테스트 1 | 테스트 2 |
 |:--------:|:--------:|
-| <video src="assets/demo_1.mp4" width="300"> | <video src="assets/demo_2.mp4" width="300"> |
+| <video src="assets/demo_1.gif" width="300"> | <video src="assets/demo_2.gif" width="300"> |
 
 </div>
 
@@ -260,7 +259,7 @@ for result in results:
 모델 학습 시 클래스 순서에 따라 코드의 클래스 ID를 수정해야 합니다:
 
 ```python
-# illegal_parking_simple.py 내부
+# illegal_parking_detection.py 내부
 CLASS_GUIDE_BLOCK = 0  # 점자 블록 클래스 ID
 CLASS_SCOOTER = 1      # 개인형 이동장치 클래스 ID
 ```
