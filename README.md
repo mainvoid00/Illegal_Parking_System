@@ -184,17 +184,15 @@ Algorithm: Illegal Parking Check
 
 ## 🎬 동작 결과
 
-### 데모 영상
+### 데모
 
 <div align="center">
 
 | 테스트 1 | 테스트 2 |
 |:--------:|:--------:|
-| <video src="assets/demo_1.gif" width="300"> | <video src="assets/demo_2.gif" width="300"> |
+| <img src="assets/demo_1.gif" width="300"> | <img src="assets/demo_2.gif" width="300"> |
 
 </div>
-
-> **Note:** GitHub에서 비디오가 재생되지 않는 경우, 파일을 다운로드하여 확인하세요.
 
 ### 학습 방법
 
